@@ -1,5 +1,7 @@
 # svg-injectr
 
+Simple module to inject external svg file into a html markup.
+It also strip away the Adobe Illustrator document if present as well as additional comments.
 
 ### Usage example
 
@@ -16,6 +18,29 @@ svgInject(options, function(res){
 ```
 
 ### options
+
+
+
+### Gulp plugin
+
+You can use this module in a gulp pipeline with:
+
+```
+var gulp = require('gulp')
+var svgInject = require('svg-injectr')
+var through = require('through2');
+
+gulp.task('default', function(){
+  gulp.src('myfile.html')
+    .pipe(through.obj(function (chunk, enc, cb) {
+      svgInject({source:chunk.path, selector:'svg_load'}, function(res){
+        chunk.contents = new Buffer(res)
+        cb(null, chunk);
+      })
+    }))
+    .pipe(gulp.dest('dist'))
+})
+```
 
 #### source
 
