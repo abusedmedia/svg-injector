@@ -1,0 +1,22 @@
+{
+  "name": "svg-injector",
+  "version": "0.1.0",
+  "description": "Inject svg at build time based on attribute tag",
+  "main": "lib/svg-injector.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "svg",
+    "inject",
+    "build"
+  ],
+  "dependencies": {
+    "jsdom": "^8.1.0"
+  },
+  "author": {
+    "name": "abusedmedia",
+    "email": "ff@todo.to.it"
+  },
+  "license": "MIT"
+}
