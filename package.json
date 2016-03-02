@@ -1,8 +1,8 @@
 {
-  "name": "svg-injector",
+  "name": "svg-injectr",
   "version": "0.1.0",
   "description": "Inject svg at build time based on attribute tag",
-  "main": "lib/svg-injector.js",
+  "main": "lib/svg-injectr.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
