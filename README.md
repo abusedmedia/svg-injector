@@ -1,11 +1,11 @@
-# svg-injector
+# svg-injectr
 
 
 ### Usage example
 
 ```
 
-var svgInject = require('svg-injector')
+var svgInject = require('svg-injectr')
 
 var options = {source:'test/test.html', selector:'svg_load'}
 
