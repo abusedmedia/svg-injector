@@ -65,6 +65,35 @@ The script will return something like:
 Svg paths needs to be relative to the source file path
 
 
+#### runtime loading for development purpose
+
+This plug-in inject svg at built time. For development purpose is much more confortable loading svg at run-time using javascript and ajax requests.
+You can include the following jquery-dependent code to do that:
+
+  function gHandleSvgLoading (svg_loaded) {
+    function loadSvg (element, path) {
+        return $.get(path)
+         .done(function (result) {
+            $(element).append(result.documentElement)
+            svg_loaded.push(path)
+          })
+         .fail(function () {
+            console.error(this)
+          })
+    }
+    $.holdReady(true)
+    var svgsPromises = []
+    $("div[data-svg*='assets/svg']").each(function () {
+      var self = this
+      var path = $(self).attr('data-svg')
+      svgsPromises.push(loadSvg(self, path))
+    })
+    $.when.apply($, svgsPromises).then(function(){
+      $.holdReady(false)
+    })
+  }
+
+
 
 # License
 

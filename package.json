@@ -1,6 +1,6 @@
 {
   "name": "svg-injectr",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "description": "Inject svg at build time based on attribute tag",
   "main": "lib/svg-injectr.js",
   "scripts": {
@@ -12,6 +12,7 @@
     "build"
   ],
   "dependencies": {
+    "jquery": "^2.2.4",
     "jsdom": "^8.1.0"
   },
   "author": {
