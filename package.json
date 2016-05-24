@@ -4,7 +4,7 @@
   "description": "Inject svg at build time based on attribute tag",
   "main": "lib/svg-injectr.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "tag": "npm version patch && git push --tags"
   },
   "keywords": [
     "svg",
